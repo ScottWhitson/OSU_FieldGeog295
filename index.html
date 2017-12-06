@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Benton TCI Spatialization</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--meta data for sharing links on Facebook-->
+    <meta property="og:title" content="Pedestrian Accessibility in Corvallis, OR"/>
+    <meta property="og:url" content="http://rawgit.com/ScottWhitson/Corvallis-Access/master/index.html"/>
+    <meta property="og:description" content="This is my Geog-371 final" />
+    <meta property="og:image" content="http://rawgit.com/ScottWhitson/Corvallis-Access/master/img/thumbnail.png"/>
+
+    <!--add required stylesheets-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <!--facebook and info icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--add favicon for the web page-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+
+    <!--storymap stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/storymap.css" />
+
+    <!--add required libraries-->
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--add ajax based data transmission-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+
+    <!--storymap javascript library -->
+    <script src="js/storymap.js"></script>
+
+
+    <!-- mapbox gl js -->
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.js"></script>
+    <!-- leaflet mapbox js -->
+    <script src="https://rawgit.com/mapbox/mapbox-gl-leaflet/master/leaflet-mapbox-gl.js"></script>
+    <script src="js/jqcloud.js"></script>
+    <link rel="stylesheet" href="//unpkg.com/leaflet@1.0.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/L.Control.Basemaps.css" />
+
+    <script src="js/L.Control.Basemaps.js"></script>
+    <!--add required stylesheets-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+
+    <!--animation-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/storymap.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <script src="js/L.Control.Basemaps.js"></script>
+
+</head>
+<body>
+<header>
+    <div class="navbar navbar-inverse navbar-fixed-top navbar-toggleable-md" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+
+                <a class="navbar-brand" href="#">Cartography & Spatialization of Survey Responses from Benton TCI 2040</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="javascript:window.scrollBy(0, $('section[data-scene=scene1]').offset().top  - $(window).scrollTop() - $('.navbar').height()  - 10);">Research Question</a>
+                    </li>
+                    <li>
+                        <a href="javascript:window.scrollBy(0, $('section[data-scene=scene2]').offset().top  - $(window).scrollTop() - $('.navbar').height()  - 10);">Public Engagement</a>
+                    </li>
+                    <li>
+                        <a href="javascript:window.scrollBy(0, $('section[data-scene=scene3]').offset().top  - $(window).scrollTop() - $('.navbar').height()  - 10);">Scene 3</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+
+
+</header>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 main">
+
+
+            <section data-scene="scene1">
+                <h3>Research Question</h3>
+                <br>
+                <p>What do the people of Benton County value in order to plan for a thriving future?</p>
+                <p>The goal of this study is to better understand what communities across Benton County value and what initiatives the people would like the government to focus on.</p>
+                <p>The secondary goal is how to visualize the results of this survey so that the general population can make comprehend the data and even make own analyses.</p>
+                <h3>Benton TCI 2040</h3>
+                <br>
+                <p>"The 2040 Thriving Communities Initiative is a community-driven, visioning process that now identified Core Values in order to address long-term, complex issues. The Core Values will guide strategies, actions, and progress measures to align community activities and government services surrounding the dynamic challenges and opportunities facing the county now and into the future" (Benton County 2040). </p>
+                <img src="img/Courthouse.jpg" class="img-responsive" alt="responsive image">
+             </section>
+
+
+            <section data-scene="scene2">
+                <h3>Public Engagement</h3>
+                <br>
+                <p></p>
+
+
+            </section>
+
+            <section data-scene="scene3">
+                <h3>How well are you able to see while walking in Corvallis after dark?</h3>
+                <br>
+                <p>Adding streetlights from the City of Corvallis and running a kernal density determined the brightness of Corvallis after dark.</p>
+
+            </section>
+
+            <div class="animated rubberBand infinite glyphicon glyphicon-menu-down arrow-down"></div>
+        </div>
+
+        <div id="map" class="col-sm-0 col-md-0 sidebar"></div>
+
+    </div>
+
+</div>
+<!--facebook icon-->
+<a class="fa fa-facebook-square btn" href="https://facebook.com/sharer.php?u=http://rawgit.com/ScottWhitson/Corvallis-Access/master/index.html" target="_blank"></a>
+<!--info icon-->
+<i class="fa fa-info-circle btn" style="top:80px" data-toggle="modal" data-target="#info-modal"></i>
+
+<!--the info page-->
+<div class="modal fade" id="info-modal" role="dialog">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><br>About</h4>
+            </div>
+            <div class="modal-body">
+                <p>This is a web map of accessibility of Corvallis' sidewalks. It is mainly made as a demo for a course GEOG 371: Web Mapping provided by Oregon State University. The story map library is derived from the storymap plugin for leaflet at <a>http://atlefren.github.io/storymap/</a>, and its functionality relies on both leaflet and Boostrap.</p>
+                <p><b>storymap.js</b> | Released Date: 02/20/2017 | Version: 2.1 | MIT License </p>
+                <p><b>Author: Scott Whitson</b> | College of Earth, Ocean, Atmospheric Science | Oregon State University </p>
+                <p>All layers used for analysis obtained from the City of Corvallis</p>
+                <p>The favicon image was acquired from <a>http://www.udlcenter.org/advocacy/state/oregon.</a></p>
+                <p>This story map uses geospatial data from mapbox.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    var map = L.map('map', {zoomControl: false, scrollWheelZoom: true, maxZoom: 21}).setView([44.522,-123.5502], 11);
+
+    //Add Basemap chooser
+    var basemaps = [
+        L.tileLayer('https://api.mapbox.com/styles/v1/whitsons/cj3l1arj400072ro5xyktkicm/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoid2hpdHNvbnMiLCJhIjoiY2l0eW15ZDJ6MDhrbTJ5bjRuZGx1Z3lmZiJ9.4RXjTjxBUVzG2X3mdtcSZQ', {
+            label: 'Outdoors',
+            detectRetina: true
+        }),
+
+        L.tileLayer('https://api.mapbox.com/styles/v1/whitsons/cj3n8v48w00182rplk23etkk5/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoid2hpdHNvbnMiLCJhIjoiY2l0eW15ZDJ6MDhrbTJ5bjRuZGx1Z3lmZiJ9.4RXjTjxBUVzG2X3mdtcSZQ', {
+            label: 'Moonlight',
+            detectRetina: true
+        }),
+
+
+        L.tileLayer('https://api.mapbox.com/styles/v1/whitsons/cj3nhkild001x2sqnbxdymg60/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoid2hpdHNvbnMiLCJhIjoiY2l0eW15ZDJ6MDhrbTJ5bjRuZGx1Z3lmZiJ9.4RXjTjxBUVzG2X3mdtcSZQ', {
+            label: 'Satellite',
+            detectRetina: true
+        })
+    ];
+
+    map.addControl(L.control.basemaps({
+        basemaps: basemaps,
+        tileX: 0,
+        tileY: 0,
+        tileZ: 1
+    }));
+
+    var layers = {
+        'layer 1': [ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw', {id: 'mapbox.dark'}), '<i style="background: black; opacity: 0.5"></i><p><b>legend 1</b></p>'],
+        'layer 2': [ L.geoJson.ajax('http://www.mapio.us/geoserver/ceoas/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ceoas:admin&outputFormat=application%2Fjson', {color: '#ff6b2a', weight: 3}), '<i style="background: #ff6b2a; opacity: 1"></i><p><b>legend 2</b></p>'],
+        'sidewalks': [ L.geoJson.ajax('assets/sidewalks.geojson',  {
+            color: '#ff6b2a',
+            weight: 4,
+            opacity: 0.3})],
+
+        'streetlights': [ L.geoJson.ajax('assets/streetlights.geojson',  {
+            color: '#ff3',
+            weight: 2
+        })],
+        //Add onEachFeature for markers if this won't display points
+        'service': [ L.geoJson.ajax('assets/service.geojson',  {
+            color: '#ff6b2a'
+        })]
+
+    };
+
+    var scenes = {
+        scene1: {lat: 44.57376, lng: -123.30888, zoom: 14, layers: ['sidewalks']},
+        scene2: {lat: 44.57376, lng: -123.30888, zoom: 14, layers: ['service']},
+        scene3: {lat: 44.57376, lng: -123.30888, zoom: 14, layers: ['streetlights']}
+
+    };
+
+    $('.main').storymap({
+        scenes: scenes,
+        layers: layers,
+        legend: true, // if you do not want a legend feature, you can simply not define the createLegend function.
+        createMap: function () {
+            // create a map in the "map" div, set the view to a given place and zoom
+            var map = L.map('map', {zoomControl: false, scrollWheelZoom: false});
+
+
+            L.control.scale({position: 'bottomright', metric: false}).addTo(map);
+
+            return map;
+        }
+    });
+
+</script>
+</body>
+</html>
